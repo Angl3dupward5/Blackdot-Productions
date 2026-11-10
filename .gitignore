@@ -1,0 +1,18 @@
+# Private environment variables
+.env
+postgre.env
+
+# Python environment and cache
+.venv/
+__pycache__/
+*.pyc
+
+# Local databases and backups
+*.db
+
+# Old or duplicate files
+templates/old combined index.html
+main - Copy.py
+# Previous repository and IDE settings
+.git-bornfree-backup/
+.idea/

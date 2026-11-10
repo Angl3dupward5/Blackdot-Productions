@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blackdot Productions | Independent Cinema</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 15, 15, 0.95);
+            z-index: 1000;
+            border-bottom: 1px solid #292929;
+        }
+
+        .brand {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #aaa;
+        }
+
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 130px 20px 70px;
+            position: relative;
+        }
+
+        .hero img {
+            width: min(2000px, 90vw);
+            max-height: 48vh;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 35px;
+        }
+
+        .hero p {
+            color: #aaa;
+            font-size: 15px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .explore {
+            margin-top: 55px;
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid #777;
+            padding: 15px 35px;
+            letter-spacing: 3px;
+            font-size: 12px;
+            transition: 0.3s;
+        }
+
+        .explore:hover {
+            background: white;
+            color: black;
+        }
+
+
+        /* FILM CATALOGUE */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: 5px;
+            margin-bottom: 60px;
+        }
+
+        .films {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .film-card {
+            background: #1b1b1b;
+            text-align: center;
+            padding-bottom: 35px;
+            transition: 0.3s;
+        }
+
+        .film-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .film-card img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+        }
+
+        .film-card h3 {
+            margin: 25px 0 12px;
+            letter-spacing: 3px;
+        }
+
+        .film-card p {
+            color: #aaa;
+            margin: 0 20px 25px;
+            line-height: 1.6;
+        }
+
+        .film-card a {
+            color: white;
+            text-decoration: none;
+            border: 1px solid #777;
+            padding: 12px 25px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .film-card a:hover {
+            background: white;
+            color: black;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            background: #191919;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            color: #bbb;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #aaa;
+            margin-top: 20px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #292929;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+
+            nav {
+                padding: 20px;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 10px;
+            }
+
+            .hero img {
+                width: 95vw;
+                max-height: 40vh;
+            }
+
+            .hero p {
+                font-size: 11px;
+                letter-spacing: 3px;
+                line-height: 1.8;
+            }
+
+            .section-heading {
+                font-size: 24px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="brand">BLACKDOT PRODUCTIONS</div>
+
+    <div>
+        <a href="/">HOME</a>
+        <a href="#films">OUR FILMS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+
+</nav>
+
+
+
+<!-- HERO SECTION -->
+
+<header class="hero">
+
+    <img
+        src="{{ url_for('static', filename='Blackdot Ink Logo.png') }}"
+        alt="Blackdot Productions Logo"
+    >
+
+    <p>Independent Stories. Unfiltered Perspectives.</p>
+
+    <a href="#films" class="explore">
+        EXPLORE OUR FILMS
+    </a>
+
+</header>
+
+
+
+<!-- FILM CATALOGUE -->
+
+<section id="films">
+
+    <h2 class="section-heading">OUR FILMS</h2>
+
+    <div class="films">
+
+
+        <!-- BORN FREE -->
+
+        <div class="film-card">
+
+            <img
+                src="{{ url_for('static', filename='poster.jpeg') }}"
+                alt="Born Free? film poster"
+            >
+
+            <h3>BORN FREE?</h3>
+
+            <p>
+                A short film exploring freedom, historical injustice
+                and resistance in democratic South Africa.
+            </p>
+
+            <a href="{{ url_for('born_free') }}">EXPLORE FILM</a>
+
+        </div>
+
+
+
+        <!-- EMANZINI -->
+
+        <div class="film-card">
+
+            <img
+                src="{{ url_for('static', filename='partially-submerged.jpg') }}"
+                alt="Emanzini film poster"
+            >
+
+            <h3>EMANZINI</h3>
+
+            <p>
+                A psychological drama exploring secrecy,
+                historical violence and emotional suppression.
+            </p>
+
+            <a href="{{ url_for('emanzini') }}">EXPLORE FILM</a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+    <h2 class="section-heading">BLACKDOT PRODUCTIONS</h2>
+
+    <p>
+
+        Blackdot Productions is an emerging independent film production
+        company dedicated to developing distinctive stories and
+        thought-provoking cinematic experiences.
+
+        Through independent filmmaking, we explore identity,
+        society, memory and the complexities of the human experience.
+
+    </p>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <h2 class="section-heading">GET IN TOUCH</h2>
+
+    <p>
+
+        For enquiries, collaborations and production opportunities,
+        contact Blackdot Productions.
+
+    </p>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    BLACKDOT PRODUCTIONS © 2026
+
+</footer>
+
+
+</body>
+</html>

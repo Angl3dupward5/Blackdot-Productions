@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emanzini | Blackdot Productions</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/films.css') }}">
+</head>
+
+<body class="emanzini-page">
+
+<nav class="film-nav">
+    <a href="{{ url_for('home') }}" class="brand">BLACKDOT</a>
+
+    <div class="nav-links">
+        <a href="#synopsis">Synopsis</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#crew-cast">Crew & Cast</a>
+        <a href="#director-statement">Director's Statement</a>
+        <a href="#trailer">Trailer</a>
+        <a href="#watch">Watch Film</a>
+        <a href="#poll">Audience Poll</a>
+    </div>
+</nav>
+
+
+<header class="hero">
+
+    <img
+        src="{{ url_for('static', filename='partially-submerged.jpg') }}"
+        class="hero-img"
+        alt="Emanzini cinematic background"
+    >
+
+    <div class="overlay"></div>
+
+    <div class="hero-text">
+        <h1>EMANZINI</h1>
+        <p>Suppression Has A Cost.</p>
+    </div>
+
+</header>
+
+
+<section class="quote-section">
+    <h2>
+        "What happens when historical violence surfaces through the next generation?"
+    </h2>
+</section>
+
+
+<section class="film-intro">
+
+    <img
+        src="{{ url_for('static', filename='EMANZINI final Poster.jpg.jpeg') }}"
+        class="film-poster"
+        alt="Emanzini official film poster"
+    >
+
+    <p>
+        A short film about Secrecy, Historical Violence,
+        and Emotional Suppression.
+    </p>
+
+</section>
+
+
+<section id="synopsis" class="film-section">
+
+    <div class="fade-in">
+        <h2>Synopsis</h2>
+    </div>
+
+    <div class="synopsis">
+
+        <p>
+            A young woman is pushed to an absolute psychological
+            breaking point from suppressing a dark family secret.
+        </p>
+
+        <p>
+            Upon discovering that one of her family members committed
+            a heinous act, she commits an irreversible act.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="gallery" class="film-section">
+
+    <h2>Gallery</h2>
+
+    <div class="film-gallery">
+        <p>Production photographs coming soon.</p>
+    </div>
+
+</section>
+
+
+<section id="crew-cast" class="film-section">
+
+    <h2>Crew & Cast</h2>
+
+    <div class="credits-container">
+
+        <div class="credit">
+            <span class="role">Starring:</span>
+            <span class="name">Giant Magudulela</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Writer:</span>
+            <span class="name">Layla Khumalo</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Director:</span>
+            <span class="name">Mlangeni Dlamini</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Co-Director / VFX Artist:</span>
+            <span class="name">Greatecute Ngqwarushe</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Producer:</span>
+            <span class="name">Mbali Mlotshwa</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Co-Producer:</span>
+            <span class="name">Mfundo Zenze</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Cinematographer:</span>
+            <span class="name">Sambulo Mncube</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Sound Designer:</span>
+            <span class="name">Nqobani Mthombeni</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Production Designer:</span>
+            <span class="name">Micah Abrahams</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Character Design & Styling:</span>
+            <span class="name">Xyra Mbatha</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Editor:</span>
+            <span class="name">Sanele Mgobozi</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="director-statement" class="film-section">
+
+    <h2>Director's Statement</h2>
+
+    <div class="director-text">
+
+        <p>
+            Emanzini explores the psychological consequences of
+            historical violence, family secrecy and emotional suppression.
+        </p>
+
+        <p>
+            The film examines how unresolved histories can resurface
+            through subsequent generations, shaping relationships,
+            identities and individual perceptions of truth.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="trailer" class="film-section">
+
+    <h2>Watch Trailer</h2>
+    <p>Trailer coming soon.</p>
+
+</section>
+
+
+<section id="watch" class="film-section">
+
+    <h2>Watch Emanzini</h2>
+    <p>Film release information coming soon.</p>
+
+</section>
+
+
+<section id="poll" class="film-section">
+
+    <h2>Audience Response</h2>
+
+    <p>What did you think of Emanzini?</p>
+
+    {% if not has_voted %}
+
+    <div class="poll-buttons">
+
+        <form action="{{ url_for('vote', film='emanzini', option='loved') }}" method="POST">
+            <button type="submit">❤️ Loved It</button>
+        </form>
+
+        <form action="{{ url_for('vote', film='emanzini', option='good') }}" method="POST">
+            <button type="submit">👍 Good</button>
+        </form>
+
+        <form action="{{ url_for('vote', film='emanzini', option='notforme') }}" method="POST">
+            <button type="submit">👎 Not For Me</button>
+        </form>
+
+    </div>
+
+    {% else %}
+
+    <div class="vote-confirmation">
+        <h3>Thank You for Voting</h3>
+        <p>Your response has been recorded.</p>
+        <p>Thank you for joining the conversation.</p>
+    </div>
+
+    {% endif %}
+
+
+    <h3>Current Audience Sentiment</h3>
+
+    <div class="poll-results">
+
+        <p>❤️ Loved It - {{ loved }}% ({{ loved_votes }} votes)</p>
+        <div class="bar-container">
+            <div class="bar" style="width:{{ loved }}%;"></div>
+        </div>
+
+        <p>👍 Good - {{ good }}% ({{ good_votes }} votes)</p>
+        <div class="bar-container">
+            <div class="bar" style="width:{{ good }}%;"></div>
+        </div>
+
+        <p>👎 Not For Me - {{ notforme }}% ({{ notforme_votes }} votes)</p>
+        <div class="bar-container">
+            <div class="bar" style="width:{{ notforme }}%;"></div>
+        </div>
+
+    </div>
+
+    <p class="total-votes">
+        Based on {{ total_votes }} audience responses.
+    </p>
+
+    <p class="poll-note">
+        Audience responses are collected anonymously.
+    </p>
+
+</section>
+
+
+<footer class="film-footer">
+
+    <p>BLACKDOT PRODUCTIONS</p>
+    <p>Independent Stories. Unfiltered Perspectives.</p>
+
+    <a href="{{ url_for('home') }}">Back to Blackdot Productions</a>
+
+</footer>
+
+</body>
+</html>

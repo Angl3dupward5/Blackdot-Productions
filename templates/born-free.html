@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Born Free? | Blackdot Productions</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/films.css') }}">
+</head>
+
+<body class="born-free-page">
+
+<!-- NAVIGATION -->
+<nav class="film-nav">
+    <a href="{{ url_for('home') }}" class="brand">BLACKDOT</a>
+
+    <div class="nav-links">
+        <a href="#synopsis">Synopsis</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#trailer">Trailer</a>
+        <a href="#crew-cast">Crew & Cast</a>
+        <a href="#director-statement">Director's Statement</a>
+        <a href="#watch">Watch Film</a>
+        <a href="#poll">Audience Poll</a>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<header class="hero">
+
+    <img src="{{ url_for('static', filename='poster.jpeg') }}"
+         class="hero-img"
+         alt="Born Free? film poster">
+
+    <div class="overlay"></div>
+
+    <div class="hero-text">
+        <h1>BORN FREE?</h1>
+        <p>Freedom Has A Price.</p>
+    </div>
+
+</header>
+
+
+<!-- OPENING QUOTE -->
+<section class="quote-section">
+    <h2>"What does Freedom really mean?"</h2>
+</section>
+
+
+<!-- FILM INTRODUCTION -->
+<section class="film-intro">
+
+    <img src="{{ url_for('static', filename='poster.jpeg') }}"
+         class="film-poster"
+         alt="Born Free? official poster">
+
+    <p>A short film about Freedom, Historical Injustice, and Resistance.</p>
+
+</section>
+
+
+<!-- SYNOPSIS -->
+<section id="synopsis" class="film-section">
+
+    <div class="fade-in">
+        <h2>Synopsis</h2>
+    </div>
+
+    <div class="synopsis">
+        <p>
+            A young woman is drawn into a symbolic Art Realm populated by
+            ancestral figures, enslaved labourers, displaced families,
+            and matric students.
+        </p>
+
+        <p>
+            In this realm, she is forced to interrogate the true meaning
+            of "Freedom" in a democratic South Africa.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery" class="film-section">
+
+    <h2>Gallery</h2>
+
+    <div class="film-gallery">
+
+        <img src="{{ url_for('static', filename='IMG_0269.JPEG') }}" alt="Born Free? production still">
+        <img src="{{ url_for('static', filename='IMG_0266.JPEG') }}" alt="Born Free? production still">
+        <img src="{{ url_for('static', filename='IMG_0274.JPEG') }}" alt="Born Free? production still">
+        <img src="{{ url_for('static', filename='IMG_0268.JPEG') }}" alt="Born Free? production still">
+        <img src="{{ url_for('static', filename='IMG_0271.JPEG') }}" alt="Born Free? production still">
+        <img src="{{ url_for('static', filename='IMG_0267.JPEG') }}" alt="Born Free? production still">
+        <img src="{{ url_for('static', filename='IMG_0272.JPEG') }}" alt="Born Free? production still">
+        <img src="{{ url_for('static', filename='IMG_0291.JPEG') }}" alt="Born Free? production still">
+        <img src="{{ url_for('static', filename='IMG_0270.JPEG') }}" alt="Born Free? production still">
+        <img src="{{ url_for('static', filename='IMG_0273.JPEG') }}" alt="Born Free? production still">
+
+    </div>
+
+</section>
+
+
+<!-- TRAILER -->
+<section id="trailer" class="film-section">
+
+    <h2>Watch Trailer</h2>
+
+    <a href="https://drive.google.com/file/d/17HL5ht4-YuEZHkpAICYtV02Hq3MOkzZ9/view?usp=drive_link"
+       target="_blank"
+       class="watch-button">
+
+        ▶ Watch Trailer
+
+    </a>
+
+    <iframe
+        src="https://drive.google.com/file/d/17HL5ht4-YuEZHkpAICYtV02Hq3MOkzZ9/preview"
+        width="800"
+        height="450"
+        allow="autoplay"
+        allowfullscreen>
+    </iframe>
+
+</section>
+
+
+<!-- CREW AND CAST -->
+<section id="crew-cast" class="film-section">
+
+    <h2>Crew & Cast</h2>
+
+    <div class="credits-container">
+
+        <div class="credit">
+            <span class="role">Starring:</span>
+            <span class="name">Nombasa Qulu</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Writer:</span>
+            <span class="name">Thatohatsi Ramokaelo</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Director:</span>
+            <span class="name">Mlangeni Dlamini</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Co-Director:</span>
+            <span class="name">Greatecute Ngqwarushe</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Producer:</span>
+            <span class="name">Mbali Mlotshwa</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Co-Producer:</span>
+            <span class="name">Mfundo Zenze</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Cinematographer:</span>
+            <span class="name">Sambulo Mncube</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Sound Designer:</span>
+            <span class="name">Nqobani Mthombeni</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Character Design & Styling:</span>
+            <span class="name">Xyra Mbatha</span>
+        </div>
+
+        <div class="credit">
+            <span class="role">Editor:</span>
+            <span class="name">Thulisile Sithebe</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DIRECTOR'S STATEMENT -->
+<section id="director-statement" class="film-section">
+
+    <h2>Director's Statement</h2>
+
+    <div class="director-text">
+
+        <p>
+            Born Free? examines the true meaning of liberation and what
+            it means to be truly free in a democratic South Africa.
+        </p>
+
+        <p>
+            This film emphasises the disparity between
+            "political freedom" and "economic freedom."
+        </p>
+
+        <p>
+            Most importantly, Born Free? asks:
+            "Was Freedom truly achieved, or is it still an ongoing struggle?"
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FULL FILM -->
+<section id="watch" class="film-section">
+
+    <h2>Watch Born Free?</h2>
+
+    <a href="https://drive.google.com/file/d/1wqQsdWzGWEYIjF_mmVKZebjPeIoDTt5z/view?usp=sharing"
+       target="_blank"
+       class="watch-button">
+
+        ▶ Watch Born Free?
+
+    </a>
+
+    <iframe
+        src="https://drive.google.com/file/d/1wqQsdWzGWEYIjF_mmVKZebjPeIoDTt5z/preview"
+        width="800"
+        height="450"
+        allow="autoplay"
+        allowfullscreen>
+    </iframe>
+
+</section>
+
+
+<!-- AUDIENCE POLL -->
+<section id="poll" class="film-section">
+
+    <h2>Audience Response</h2>
+
+    <p>What did you think of Born Free?</p>
+
+    {% if not has_voted %}
+
+    <div class="poll-buttons">
+
+        <form action="{{ url_for('vote', film='born-free', option='loved') }}" method="POST">
+            <button type="submit">❤️ Loved It</button>
+        </form>
+
+        <form action="{{ url_for('vote', film='born-free', option='good') }}" method="POST">
+            <button type="submit">👍 Good</button>
+        </form>
+
+        <form action="{{ url_for('vote', film='born-free', option='notforme') }}" method="POST">
+            <button type="submit">👎 Not For Me</button>
+        </form>
+
+    </div>
+
+    {% else %}
+
+    <div class="vote-confirmation">
+
+        <h3>Thank You for Voting</h3>
+
+        <p>Your response has been recorded.</p>
+
+        <p>
+            Freedom means different things to different people.
+            Thank you for joining the conversation.
+        </p>
+
+    </div>
+
+    {% endif %}
+
+
+    <h3>Current Audience Sentiment</h3>
+
+    <div class="poll-results">
+
+        <p>❤️ Loved It - {{ loved }}% ({{ loved_votes }} votes)</p>
+
+        <div class="bar-container">
+            <div class="bar" style="width:{{ loved }}%;"></div>
+        </div>
+
+
+        <p>👍 Good - {{ good }}% ({{ good_votes }} votes)</p>
+
+        <div class="bar-container">
+            <div class="bar" style="width:{{ good }}%;"></div>
+        </div>
+
+
+        <p>👎 Not For Me - {{ notforme }}% ({{ notforme_votes }} votes)</p>
+
+        <div class="bar-container">
+            <div class="bar" style="width:{{ notforme }}%;"></div>
+        </div>
+
+    </div>
+
+    <p class="total-votes">
+        Based on {{ total_votes }} audience responses.
+    </p>
+
+    <p class="poll-note">
+        Audience responses are collected anonymously.
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="film-footer">
+
+    <p>BLACKDOT PRODUCTIONS</p>
+
+    <p>Independent Stories. Unfiltered Perspectives.</p>
+
+    <a href="{{ url_for('home') }}">Back to Blackdot Productions</a>
+
+</footer>
+
+</body>
+</html>

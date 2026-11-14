@@ -2,9 +2,191 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Blackdot Productions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #111111;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            border-bottom: 1px solid #292929;
+        }
+
+        .brand {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .about-hero {
+            min-height: 55vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 70px 10%;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(38px, 6vw, 68px);
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        .about-hero p {
+            color: #aaa;
+            font-size: 18px;
+            max-width: 700px;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 60px 25px 100px;
+        }
+
+        .about-content h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .about-content p {
+            color: #bdbdbd;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .social-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: #191919;
+        }
+
+        .social-section h2 {
+            margin-bottom: 15px;
+        }
+
+        .instagram-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border: 1px solid #777;
+            padding: 12px 25px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .instagram-link:hover {
+            background: white;
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 20px 5%;
+            }
+
+            .about-hero {
+                min-height: 45vh;
+            }
+        }
+    </style>
 </head>
+
 <body>
+
+<nav>
+    <a href="{{ url_for('home') }}" class="brand">BLACKDOT</a>
+    <a href="{{ url_for('home') }}">HOME</a>
+</nav>
+
+<section class="about-hero">
+    <h1>ABOUT BLACKDOT</h1>
+    <p>
+        Independent Stories. Unfiltered Perspectives.
+        Cinema that challenges, provokes and explores the human experience.
+    </p>
+</section>
+
+<section class="about-content">
+
+    <h2>WHO WE ARE</h2>
+
+    <p>
+        Blackdot Productions is an independent film production company
+        driven by a passion for storytelling and visual expression.
+        We create films that explore complex human experiences,
+        question established perspectives and engage with the world
+        around us.
+    </p>
+
+    <h2>OUR VISION</h2>
+
+    <p>
+        We believe cinema is more than entertainment. It is a medium
+        through which stories can challenge perceptions, confront
+        uncomfortable realities and inspire meaningful conversations.
+    </p>
+
+    <p>
+        Through experimental approaches, distinctive visual language
+        and thought-provoking narratives, Blackdot Productions aims
+        to bring unconventional stories to the screen.
+    </p>
+
+</section>
+
+<section class="social-section">
+    <h2>CONNECT WITH US</h2>
+
+    <p>Follow our journey and keep up with our latest projects.</p>
+
+    <a href="https://www.instagram.com/blackd0tproductions/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="instagram-link">
+        Instagram | @blackd0tproductions
+    </a>
+</section>
+
+<footer>
+    © 2026 Blackdot Productions. All Rights Reserved.
+</footer>
 
 </body>
 </html>

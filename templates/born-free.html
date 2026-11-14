@@ -20,7 +20,15 @@
 <nav class="film-nav">
     <a href="{{ url_for('home') }}" class="brand">BLACKDOT</a>
 
-    <div class="nav-links">
+    <button class="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="film-navigation">
+        ☰
+    </button>
+
+    <div class="nav-links" id="film-navigation">
         <a href="#synopsis">Synopsis</a>
         <a href="#gallery">Gallery</a>
         <a href="#trailer">Trailer</a>
@@ -341,5 +349,6 @@
 
 </footer>
 
+<script src="{{ url_for('static', filename='js/film-nav.js') }}"></script>
 </body>
 </html>

@@ -19,7 +19,15 @@
 <nav class="film-nav">
     <a href="{{ url_for('home') }}" class="brand">BLACKDOT</a>
 
-    <div class="nav-links">
+    <button class="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="film-navigation">
+        ☰
+    </button>
+
+    <div class="nav-links" id="film-navigation">
         <a href="#synopsis">Synopsis</a>
         <a href="#gallery">Gallery</a>
         <a href="#crew-cast">Crew & Cast</a>
@@ -30,11 +38,10 @@
     </div>
 </nav>
 
-
 <header class="hero">
 
     <img
-        src="{{ url_for('static', filename='partially-submerged.jpg') }}"
+        src="{{ url_for('static', filename='Emanzini_ Poster.png') }}"
         class="hero-img"
         alt="Emanzini cinematic background"
     >
@@ -194,11 +201,18 @@
 </section>
 
 
-<section id="trailer" class="film-section">
+<section id="trailer" class="trailer-section">
+    <h2>OFFICIAL TRAILER</h2>
 
-    <h2>Watch Trailer</h2>
-    <p>Trailer coming soon.</p>
-
+    <div class="video-container">
+        <iframe
+            src="https://drive.google.com/file/d/1pmcunCuyOWL5Zj30lsjKVof4qID2u0Uc/preview"
+            width="100%"
+            height="500"
+            allow="autoplay"
+            allowfullscreen>
+        </iframe>
+    </div>
 </section>
 
 
@@ -286,5 +300,6 @@
 
 </footer>
 
+<script src="{{ url_for('static', filename='js/film-nav.js') }}"></script>
 </body>
 </html>

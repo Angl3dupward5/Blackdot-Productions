@@ -17,6 +17,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 90px;
         }
 
         body {
@@ -210,6 +211,67 @@
         }
 
 
+        /* WEB CREATOR */
+
+        .web-creator {
+            background: #111;
+        }
+
+        .creator-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .creator-image {
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+            object-position: center;
+            filter: grayscale(100%);
+            display: block;
+        }
+
+        .creator-info .creator-label {
+            color: #888;
+            font-size: 12px;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .creator-info h2 {
+            font-size: clamp(30px, 4vw, 46px);
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .creator-titles {
+            color: #aaa;
+            font-size: 12px;
+            letter-spacing: 2px;
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+
+        .creator-info p {
+            color: #bbb;
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .creator-signature {
+            margin-top: 30px;
+            padding-left: 18px;
+            border-left: 2px solid #777;
+            color: #ddd !important;
+            font-style: italic;
+        }
+
+
         /* CONTACT */
 
         .contact {
@@ -236,10 +298,25 @@
 
         /* MOBILE */
 
+        @media (max-width: 850px) {
+
+            .creator-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                max-width: 600px;
+            }
+
+            .creator-image {
+                height: 500px;
+                max-width: 100%;
+            }
+
+        }
+
         @media (max-width: 650px) {
 
             nav {
-                padding: 20px;
+                padding: 20px 10px;
                 flex-direction: column;
                 gap: 18px;
             }
@@ -247,6 +324,11 @@
             nav a {
                 margin: 0 7px;
                 font-size: 10px;
+                letter-spacing: 1px;
+            }
+
+            .brand {
+                font-size: 17px;
             }
 
             .hero img {
@@ -266,6 +348,18 @@
 
             .about p {
                 font-size: 15px;
+            }
+
+            .creator-image {
+                height: 420px;
+            }
+
+            .creator-info h2 {
+                font-size: 30px;
+            }
+
+            .creator-info p {
+                font-size: 14px;
             }
 
         }
@@ -288,6 +382,7 @@
         <a href="/">HOME</a>
         <a href="#films">OUR FILMS</a>
         <a href="#about">ABOUT</a>
+        <a href="#web-creator">WEB CREATOR</a>
         <a href="#contact">CONTACT</a>
     </div>
 
@@ -416,6 +511,78 @@
     >
         INSTAGRAM | @blackd0tproductions
     </a>
+
+</section>
+
+
+
+<!-- WEB CREATOR -->
+
+<section id="web-creator" class="web-creator">
+
+    <h2 class="section-heading">WEB CREATOR</h2>
+
+    <div class="creator-container">
+
+        <img
+            src="{{ url_for('static', filename='IMG_0274.JPEG') }}"
+            alt="Portrait of Greatecute Ngqwarushe"
+            class="creator-image"
+        >
+
+        <div class="creator-info">
+
+            <div class="creator-label">THE CREATIVE MIND BEHIND BLACKDOT</div>
+
+            <h2>GREATECUTE NGQWARUSHE</h2>
+
+            <div class="creator-titles">
+                FILMMAKER | WRITER | VISUAL ARTIST<br>
+                VFX ARTIST | WEB CREATOR
+            </div>
+
+            <p>
+                Born in Durban, raised in the Eastern Cape and educated
+                in the Free State and KZN, Greatecute Ngqwarushe is an emerging
+                filmmaker, writer and multidisciplinary visual artist
+                whose creative practice is driven by an enduring
+                curiosity about the human experience.
+            </p>
+
+            <p>
+                His work explores identity, psychology, philosophy and
+                the complexities of existence. Drawn to symbolism,
+                experimental expression and unconventional narratives,
+                he approaches storytelling as an opportunity to question
+                familiar perspectives and investigate ideas that exist
+                beneath the surface of everyday experience.
+            </p>
+
+            <p>
+                Beyond filmmaking and writing, his practice extends into
+                visual design, visual effects and digital development.
+                These disciplines allow him to combine artistic
+                sensibility with technical curiosity, exploring different
+                ways of translating ideas into visual experiences.
+            </p>
+
+            <p>
+                As the creator of the Blackdot Productions website, he
+                extends this philosophy into the digital space, helping
+                establish a visual identity that reflects the company's
+                independent spirit and commitment to distinctive
+                storytelling.
+            </p>
+
+            <p class="creator-signature">
+                At the centre of his practice is a fascination with
+                ideas that challenge perception, provoke introspection
+                and invite audiences to look beyond the surface.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
